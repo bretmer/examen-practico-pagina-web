@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pollería El Buen Sabor</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --primary: #b71c1c;
+      --accent: #ffb300;
+    }
+  </style>
+
+  <style>
+    /* Tablet */
+    @media (min-width: 640px) {
+      .custom-title {
+        font-size: 2.25rem;
+      }
+      .custom-form {
+        padding: 2rem;
+      }
+      .custom-service-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Desktop */
+    @media (min-width: 1024px) {
+      .custom-title {
+        font-size: 3rem;
+      }
+      .custom-form {
+        max-width: 600px;
+        margin: auto;
+      }
+      .custom-service-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
+
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- NAV -->
+  <header class="bg-[var(--primary)] text-white">
+  <nav class="max-w-6xl mx-auto flex justify-between items-center py-4 px-6 relative">
+    <!-- Logo -->
+    <h1 class="text-2xl font-bold">Pollería El Buen Sabor</h1>
+
+    <!-- Botón hamburguesa (solo en móvil) -->
+    <button class="block md:hidden focus:outline-none" id="menu-btn">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+
+    <!-- Menú horizontal (visible en desktop) -->
+    <ul class="hidden md:flex gap-6">
+      <li><a href="#inicio" class="hover:underline">Inicio</a></li>
+      <li><a href="#servicios" class="hover:underline">Servicios</a></li>
+      <li><a href="#contacto" class="hover:underline">Contacto</a></li>
+    </ul>
+
+    <!-- Menú móvil desplegable vertical -->
+    <div id="mobile-menu"
+         class="hidden absolute right-6 top-[100%] w-40 bg-white text-[var(--primary)] shadow-lg rounded-lg flex flex-col divide-y divide-gray-200 z-50">
+      <a href="#inicio" class="px-4 py-3 hover:bg-[var(--accent)] hover:text-white transition">Inicio</a>
+      <a href="#servicios" class="px-4 py-3 hover:bg-[var(--accent)] hover:text-white transition">Servicios</a>
+      <a href="#contacto" class="px-4 py-3 hover:bg-[var(--accent)] hover:text-white transition">Contacto</a>
+    </div>
+  </nav>
+</header>
+
+
+  <!-- INICIO -->
+  <section id="inicio" class="relative bg-[url('public/imagen-fondo.jpg')] bg-cover bg-center text-white py-24 px-6">
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="relative max-w-6xl mx-auto flex flex-col md:items-start md:text-left text-center z-10">
+    <h2 class="text-4xl font-bold mb-4 text-[#FF6F00]">¡El sabor que te hace volver!</h2>
+    <p class="text-lg max-w-xl">
+      En <strong>Pollería El Buen Sabor</strong> te ofrecemos el mejor pollo a la brasa, papas crocantes y salsas únicas para que disfrutes con quien más quieres.
+    </p>
+    </div>
+  </section>
+
+
+  <!-- SERVICIOS -->
+  <section id="servicios" class="py-16 px-6 bg-[#FFF3E0]">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-[var(--primary)] text-center mb-12">Nuestros Servicios</h2>
+      <div class="grid gap-8 md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
+        
+        <!-- Tarjeta 1 -->
+        <div class="bg-white rounded-xl shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg overflow-hidden">
+          <img src="public/pollo-a-la-brasa.png" alt="Pollo a la brasa" class="w-full h-48 object-cover">
+          <div class="p-6 flex flex-col gap-2">
+            <h3 class="text-xl font-semibold text-[var(--primary)] mb-2">Pollo a la Brasa</h3>
+            <p>Delicioso pollo acompañado de papas crocantes y ensalada fresca.</p>
+          </div>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="bg-white rounded-xl shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg overflow-hidden">
+          <img src="public/delibery.png" alt="Delivery rápido" class="w-full h-48 object-cover">
+          <div class="p-6 flex flex-col gap-2">
+            <h3 class="text-xl font-semibold text-[var(--primary)] mb-2">Delivery Rápido</h3>
+            <p>Haz tu pedido en línea y recíbelo caliente, recién salido del horno.</p>
+          </div>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="bg-white rounded-xl shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg overflow-hidden">
+          <img src="public/eventos-especiales.png" alt="Eventos especiales" class="w-full h-48 object-cover">
+          <div class="p-6 flex flex-col gap-2">
+            <h3 class="text-xl font-semibold text-[var(--primary)] mb-2">Eventos Especiales</h3>
+            <p>Atendemos cumpleaños, reuniones familiares y eventos corporativos.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="py-12 px-6 bg-yellow-50">
+    <div class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+      <h2 class="text-2xl font-bold text-[var(--primary)] mb-6 text-center">Contáctanos</h2>
+      <form class="custom-form bg-white p-6 rounded-xl shadow flex flex-col gap-4">
+        <input type="text" placeholder="nombre" class="border border-gray-300 rounded px-4 py-2 focus:outline-[var(--primary)]">
+        <input type="email" placeholder="correo electronico" class="border border-gray-300 rounded px-4 py-2 focus:outline-[var(--primary)]">
+        <textarea placeholder="mensaje" class="border border-gray-300 rounded px-4 py-2 h-32 focus:outline-[var(--primary)]"></textarea>
+        <button type="submit"
+        class="bg-[var(--primary)] text-white py-2 px-6 rounded shadow transition duration-300 hover:bg-red-800 hover:shadow-lg">Enviar</button>
+      </form>
+    </div>
+  </section>
+  <!-- FOOTER -->
+  <footer class="bg-[var(--primary)] text-white py-6 mt-12">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-center md:text-left">© 2025 Hecho por Bretmer Condori Huamantoma. Todos los derechos reservados.</p>
+      <div class="flex gap-4">
+
+        <!-- Facebook -->
+        <a href="https://facebook.com" class="group w-10 h-10 bg-white rounded-full flex items-center justify-center transition duration-300 hover:-translate-y-1 hover:bg-[#1877F2]" title="Facebook">
+        <img src="public/logos/facebook.png"
+          alt="Facebook"
+          class="w-5 h-5 filter invert-0 brightness-0 transition duration-300 group-hover:invert group-hover:brightness-200">
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://instagram.com" class="group w-10 h-10 bg-white rounded-full flex items-center justify-center transition duration-300 hover:-translate-y-1 hover:bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-500" title="Instagram">
+        <img src="public/logos/instagram.png"
+          alt="Instagram"
+          class="w-5 h-5 filter invert-0 brightness-0 transition duration-300 group-hover:invert group-hover:brightness-200">
+        </a>
+
+        <!-- TikTok -->
+        <a href="https://tiktok.com" class="group w-10 h-10 bg-white rounded-full flex items-center justify-center transition duration-300 hover:-translate-y-1 hover:bg-black" title="TikTok">
+        <img src="https://cdn-icons-png.flaticon.com/512/3046/3046120.png"
+          alt="TikTok"
+          class="w-5 h-5 filter invert-0 brightness-0 transition duration-300 group-hover:invert group-hover:brightness-200">
+        </a>
+
+        <!-- YouTube -->
+        <a href="https://youtube.com" class="group w-10 h-10 bg-white rounded-full flex items-center justify-center transition duration-300 hover:-translate-y-1 hover:bg-red-600" title="YouTube">
+        <img src="public/logos/youtube.png"
+          alt="YouTube"
+          class="w-5 h-5 filter invert-0 brightness-0 transition duration-300 group-hover:invert group-hover:brightness-200">
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me" class="group w-10 h-10 bg-white rounded-full flex items-center justify-center transition duration-300 hover:-translate-y-1 hover:bg-green-500" title="WhatsApp">
+        <img src="public/logos/whatsApp.png"
+          alt="WhatsApp"
+          class="w-5 h-5 filter invert-0 brightness-0 transition duration-300 group-hover:invert group-hover:brightness-200">
+        </a>
+        
+      </div>
+    </div>
+  </footer>
+</body>
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+  document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.add('hidden');
+    });
+  });
+</script>
+</html>
